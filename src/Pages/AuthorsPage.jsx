@@ -51,23 +51,26 @@ const AuthorsPage = () => {
             birthDate: formData.birthDate,
             nationality: formData.nationality
         };
-
+    
         if (formData.authorId) {
             // Cập nhật dữ liệu
-            setAuthors(authors.map(a => a.authorId === formData.authorId ? formData : a));
             const success = await updateAuthor(formData.authorId, data);
-            fetchAuthors();
+            if (success) {
+                setAuthors(authors.map(a => a.authorId === formData.authorId ? formData : a));
+                fetchAuthors(); // Fetch updated authors if update was successful
+            }
         } else {
             // Thêm mới
             const newAuthor = { ...formData, authorId: authors.length + 1 };
             setAuthors([...authors, newAuthor]);
             const success = await insertAuthor(data);
-            fetchAuthors();
+            if (success) {
+                fetchAuthors();
+            }
         }
-
+    
         handleCloseModal();
-    };
-
+    };    
 
     const handleDeleteAuthor = async (id) => {
         const success = await deleteAuthor(id);
