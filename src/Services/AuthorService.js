@@ -9,6 +9,7 @@ export const getAuthors = async () => {
         }
 
         const data = await response.json();
+        console.log(data.message);
         console.log("Authors fetched successfully:", data.data);
         return data.data;
     } catch (error) {

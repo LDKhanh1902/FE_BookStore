@@ -69,8 +69,8 @@ const AuthorsPage = () => {
     };
 
 
-    const handleDeleteAuthor = async () => {
-        const success = await deleteAuthor(formData.authorId);
+    const handleDeleteAuthor = async (id) => {
+        const success = await deleteAuthor(id);
         if (!success) {
             alert("Xóa không thành công");
             return;
@@ -96,20 +96,24 @@ const AuthorsPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {authors.map((author) => (
-                        <tr key={author.authorId}>
-                            <td>{author.authorId}</td>
-                            <td>{author.name}</td>
-                            <td>{author.birthDate}</td>
-                            <td>{author.nationality}</td>
-                            <td>
-
-                                <button className="btn btn-warning btn-sm me-2" onClick={() => handleShowModal(author)}>Sửa</button>
-                                <button className="btn btn-danger btn-sm" onClick={() => handleDeleteAuthor(author.authorId)}>Xóa</button>
-                            </td>
+                    {authors.length > 0 ? (
+                        authors.map((author) => (
+                            <tr key={author.authorId}>
+                                <td>{author.authorId}</td>
+                                <td>{author.name}</td>
+                                <td>{new Date(author.birthDate).toLocaleDateString("vi-VN")}</td>
+                                <td>{author.nationality}</td>
+                                <td>
+                                    <button className="btn btn-warning btn-sm me-2" onClick={() => handleShowModal(author)}>Sửa</button>
+                                    <button className="btn btn-danger btn-sm" onClick={() => handleDeleteAuthor(author.authorId)}>Xóa</button>
+                                </td>
+                            </tr>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="5" className="text-center">Không có tác giả nào</td>
                         </tr>
-                    ))}
-
+                    )}
                 </tbody>
             </table>
 
