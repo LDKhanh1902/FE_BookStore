@@ -19,7 +19,7 @@ export const getAuthors = async () => {
 
 export const insertAuthor = async (author) => {
     try{
-        const response = await fetch('https://bookstoreapi-eebn.onrender.com/api/insertauthor',
+        const response = await fetch('https://bookstoreapi-eebn.onrender.com/api/authors',
             {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
@@ -47,7 +47,7 @@ export const insertAuthor = async (author) => {
 
 export const updateAuthor = async (id,author) => {
     try{
-        const response = await fetch('https://bookstoreapi-eebn.onrender.com/api/updateauthor',
+        const response = await fetch(`https://bookstoreapi-eebn.onrender.com/api/authors/${id}`,
             {
                 method: 'PUT',
                 headers: { "Content-Type": "application/json" },
@@ -72,8 +72,8 @@ export const updateAuthor = async (id,author) => {
 }
 
 export const deleteAuthor = async (id) => {
-    try{
-        const response = await fetch('https://bookstoreapi-eebn.onrender.com/api/deleteauthor',
+    try{ 
+        const response = await fetch(`https://bookstoreapi-eebn.onrender.com/api/authors/${id}`,
             {
                 method:'DELETE',
                 headers: { "Content-Type": "application/json" },
