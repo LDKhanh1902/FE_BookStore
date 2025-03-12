@@ -47,6 +47,8 @@ export const insertAuthor = async (author) => {
 }
 
 export const updateAuthor = async (id,author) => {
+    alert(id);
+
     try{
         const response = await fetch(`https://bookstoreapi-eebn.onrender.com/api/authors/${id}`,
             {
@@ -58,16 +60,16 @@ export const updateAuthor = async (id,author) => {
 
         if(response.ok){
             const data = await response.json();
-            console.error(data);
+            alert(data);
             return false;
         }
         const data = await response.json();
-        console.log("Message:", data.message);
+        alert("Message:", data.message);
         console.log(data.data);
         return true;
     }
     catch(error){
-        console.error("Fetch error:", error);
+        alert("Fetch error:", error);
         return false;
     }
 }
