@@ -5,9 +5,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import HomePage from "./Pages/HomePage";
 import AuthorsPage from "./Pages/AuthorsPage";
 import CategoriesPage from "./Pages/CategoriesPage";
-import UploadImage from "./Pages/UploadImage";
+import PublishersPage from './Pages/PublishersPage';
 import Navbar from "./Components/Navbar";
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<AuthorsPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/authors" element={<AuthorsPage />} />
             <Route path="/categories" element={<CategoriesPage />} />
-            <Route path="/uploadimage" element={<UploadImage />} />
+            <Route path="/publishers" element={<PublishersPage />} />
           </Routes>
         </Router>
       </div>

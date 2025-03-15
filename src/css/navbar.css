@@ -1,0 +1,23 @@
+/* Navbar */
+.navbar {
+    padding: 10px 20px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-item:hover{
+    background-color:gray;
+    border-radius: 5px;
+}
+
+/* Căn chỉnh các nút */
+.auth-buttons button {
+    width: 90px;
+}
+
+/* Tìm kiếm */
+.search-form input {
+    max-width: 200px;
+}

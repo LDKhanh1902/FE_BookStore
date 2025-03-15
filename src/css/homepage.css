@@ -1,0 +1,105 @@
+/* Trang chủ */
+.homepage {
+    font-family: Arial, sans-serif;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.banner h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Danh mục sách */
+.categories {
+    text-align: center;
+    padding: 20px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-list button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.category-list button:hover {
+    background-color: #0056b3;
+}
+
+/* Danh sách sách */
+.book-list {
+    text-align: center;
+    padding: 20px;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.book-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book-card button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
