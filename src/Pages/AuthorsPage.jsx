@@ -28,6 +28,7 @@ const AuthorsPage = () => {
         if (author) {
             setFormData({
                 ...author,
+                authorId: author.authorId,
                 birthDate: formatDate(author.birthDate), // Chuyển đổi ngày tháng
             });
         } else {
@@ -47,11 +48,20 @@ const AuthorsPage = () => {
     // Xử lý lưu dữ liệu
     const handleSave = async () => {
         const data = {
+            authorId: formData.authorId,
             name: formData.name,
             birthDate: formData.birthDate,
             nationality: formData.nationality
         };
+<<<<<<< Updated upstream
     
+=======
+<<<<<<< HEAD
+        console.log(data)
+=======
+    
+>>>>>>> 72f0e7b153f9554756dc37ee13982c7d38bffd11
+>>>>>>> Stashed changes
         if (formData.authorId) {
             // Cập nhật dữ liệu
             const success = await updateAuthor(formData.authorId, data);

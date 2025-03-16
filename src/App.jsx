@@ -7,13 +7,19 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import HomePage from "./Pages/HomePage";
 import AuthorsPage from "./Pages/AuthorsPage";
+<<<<<<< Updated upstream
 import CategoriesPage from "./Pages/CategoriesPage";
 import PublishersPage from './Pages/PublishersPage';
 import Navbar from "./Components/Navbar";
+=======
+import CategoriesPage from './Pages/CategoriesPage'; "./Pages/CategoriesPage";
+import Navbar from './Components/Navbar';
+>>>>>>> Stashed changes
 
 function App() {
   return (
     <>
+<<<<<<< Updated upstream
       <div>
         <Router>
           <Navbar />
@@ -25,6 +31,15 @@ function App() {
           </Routes>
         </Router>
       </div>
+=======
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<AuthorsPage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+        </Routes>
+      </Router>
+>>>>>>> Stashed changes
     </>
   );
 }
