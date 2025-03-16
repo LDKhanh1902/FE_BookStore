@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-G5B6CTVZ1Q"
 };
 
-// Khởi tạo Firebase
+// Khởi tạo Firebaseda
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const storage = getStorage(app); // Đúng cách import Storage
